@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\targetver.h" />
+    <ClInclude Include="Src\DAO\Account.h" />
+    <ClInclude Include="Src\DAO\DAO.h" />
+    <ClInclude Include="Src\DataBase\Column.h" />
+    <ClInclude Include="Src\DataBase\ColumnPimplData_i.h" />
+    <ClInclude Include="Src\DataBase\Database.h" />
+    <ClInclude Include="Src\DataBase\DatabasePimplData_i.h" />
+    <ClInclude Include="Src\DataBase\Exception.h" />
+    <ClInclude Include="Src\DataBase\macros.h" />
+    <ClInclude Include="Src\DataBase\otlv4.h" />
+    <ClInclude Include="Src\DataBase\Query.h" />
+    <ClInclude Include="Src\DataBase\QueryPimplData_i.h" />
+    <ClInclude Include="Src\DataBase\ScopedTransaction.h" />
+    <ClInclude Include="Src\DataBase\SimpleDB.h" />
+    <ClInclude Include="Src\DataBase\sqlwrap.h" />
+    <ClInclude Include="Src\Entity\Account.h" />
+    <ClInclude Include="Src\Game\enums.h" />
+    <ClInclude Include="Src\Game\Mount.h" />
+    <ClInclude Include="Src\Game\Player.h" />
+    <ClInclude Include="Src\Game\TimeManager.h" />
+    <ClInclude Include="Src\Game\WeatherManager.h" />
+    <ClInclude Include="Src\Game\World.h" />
+    <ClInclude Include="Src\Network\Packet.h" />
+    <ClInclude Include="Src\Network\Server.h" />
+    <ClInclude Include="Src\Network\Session.h" />
+    <ClInclude Include="Src\System\DBWorkQueue.h" />
+    <ClInclude Include="Src\System\Event.h" />
+    <ClInclude Include="Src\System\EventEmitter.h" />
+    <ClInclude Include="Src\System\EventListener.h" />
+    <ClInclude Include="Src\System\Job.h" />
+    <ClInclude Include="Src\System\Log.h" />
+    <ClInclude Include="Src\System\Vector3.h" />
+    <ClInclude Include="Src\System\WorkQueue.h" />
+    <ClInclude Include="Src\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\DataBase\BigintColumn.cpp" />
+    <ClCompile Include="Src\DataBase\BoolColumn.cpp" />
+    <ClCompile Include="Src\DataBase\Column.cpp" />
+    <ClCompile Include="Src\DataBase\Database.cpp" />
+    <ClCompile Include="Src\DataBase\DoubleColumn.cpp" />
+    <ClCompile Include="Src\DataBase\Exception.cpp" />
+    <ClCompile Include="Src\DataBase\IntColumn.cpp" />
+    <ClCompile Include="Src\DataBase\LongColumn.cpp" />
+    <ClCompile Include="Src\DataBase\Query.cpp" />
+    <ClCompile Include="Src\DataBase\ScopedTransaction.cpp" />
+    <ClCompile Include="Src\DataBase\StringColumn.cpp" />
+    <ClCompile Include="Src\Game\Mount.cpp" />
+    <ClCompile Include="Src\Game\Player.cpp" />
+    <ClCompile Include="Src\Game\TimeManager.cpp" />
+    <ClCompile Include="Src\Game\WeatherManager.cpp" />
+    <ClCompile Include="Src\Game\World.cpp" />
+    <ClCompile Include="Src\Game\WorldSenders.cpp" />
+    <ClCompile Include="Src\Network\Handlers\Authentication.cpp" />
+    <ClCompile Include="Src\Network\Handlers\Character.cpp" />
+    <ClCompile Include="Src\Network\Handlers\Interaction.cpp" />
+    <ClCompile Include="Src\Network\Handlers\Move.cpp" />
+    <ClCompile Include="Src\Network\Server.cpp" />
+    <ClCompile Include="Src\Network\Session.cpp" />
+    <ClCompile Include="Src\System\DBWorkQueue.cpp" />
+    <ClCompile Include="Src\System\EventEmitter.cpp" />
+    <ClCompile Include="Src\System\Log.cpp" />
+    <ClCompile Include="Src\System\WorkQueue.cpp" />
+    <ClCompile Include="Src\Skyrim.cpp" />
+    <ClCompile Include="Src\stdafx.cpp" />
+  </ItemGroup>
+</Project>
