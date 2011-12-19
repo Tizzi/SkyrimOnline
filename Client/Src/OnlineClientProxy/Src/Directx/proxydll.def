@@ -1,0 +1,5 @@
+LIBRARY	"SkyrimOnlineProxy"
+
+EXPORTS
+        Direct3DCreate9 @1
+		D3DPERF_SetOptions @2

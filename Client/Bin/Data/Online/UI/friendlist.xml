@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowC" position_real="0.78 0.331667 0.22 0.4" layer="Back" name="FriendList_Window">
+        <Property key="Widget_Caption" value="Friend List"/>
+        <Property key="Widget_Alpha" value="0.2"/>
+        <Widget type="Button" skin="Button" position_real="0.89759 1.00985 0.150602 0.147783" name="FriendList_Add">
+            <Property key="Widget_Caption" value="+"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position_real="0.0180723 1.00985 0.873494 0.147783"/>
+        <Widget type="List" skin="List" position_real="0 0 1.06024 0.975369"/>
+    </Widget>
+</MyGUI>

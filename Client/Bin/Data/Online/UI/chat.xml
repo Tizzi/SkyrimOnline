@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="List" skin="List" position_real="0.01 0.749403 0.35 0.178998" layer="Overlapped" name="Chat_List">
+	<Property key="Widget_Alpha" value="0.7"/>
+	</Widget>
+    <Widget type="Edit" skin="Edit" position_real="0.01 0.939141 0.35 0.0298329" layer="Overlapped" name="Chat_Edit">
+	<Property key="Widget_Alpha" value="0.7"/>
+	</Widget>
+</MyGUI>
