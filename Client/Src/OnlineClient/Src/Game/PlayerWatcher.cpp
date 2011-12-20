@@ -58,7 +58,7 @@ namespace SkyrimOnline
 							// Associate mount to player
 							Packet mount;
 							mount.Opcode = CMSG_MOUNT_SPAWN;
-							mount.Int(0x0010982B);
+							mount.Push((unsigned int)0x0010982B);
 							mSession->Write(mount);
 						}
 						else
@@ -66,7 +66,7 @@ namespace SkyrimOnline
 							// Dettach mount
 							Packet mount;
 							mount.Opcode = CMSG_MOUNT_REMOVE;
-							mount.Int(0);
+							mount.Push((unsigned int)0);
 							mSession->Write(mount);
 						}
 					}

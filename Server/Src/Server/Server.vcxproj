@@ -228,6 +228,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>..\..\..\Dependencies\Boost\Lib\x64</AdditionalLibraryDirectories>
       <OutputFile>..\..\Bin\$(TargetName).exe</OutputFile>
+      <ProgramDatabaseFile>..\..\Bin\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
