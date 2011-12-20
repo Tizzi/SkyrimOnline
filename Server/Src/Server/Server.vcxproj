@@ -81,6 +81,7 @@
     <ClCompile Include="Src\Skyrim.cpp" />
     <ClCompile Include="Src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Src\System\DBWorkQueue.cpp" />
     <ClCompile Include="Src\System\EventEmitter.cpp" />
@@ -154,8 +155,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)\Bin\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>..\..\Obj\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>..\..\Obj\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -205,7 +206,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\..\..\Dependencies\Boost\Lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\Dependencies\Boost\Lib\x86</AdditionalLibraryDirectories>
       <OutputFile>..\..\Bin\$(TargetName).exe</OutputFile>
     </Link>
   </ItemDefinitionGroup>
@@ -218,14 +219,15 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
-      <AdditionalIncludeDirectories>./Src;"$(BOOST_ROOT)"</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./Src;..\..\..\Dependencies\Boost\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(BOOST_ROOT)\lib\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\Dependencies\Boost\Lib\x64</AdditionalLibraryDirectories>
+      <OutputFile>..\..\Bin\$(TargetName).exe</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -83,7 +83,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>..\..\Bin\$(TargetName).dll</OutputFile>
-      <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86;..\..\..\Dependencies\Boost\Lib;..\..\..\Dependencies\MyGUI\Lib;..\..\Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86;..\..\..\Dependencies\Boost\Lib\x86;..\..\..\Dependencies\MyGUI\Lib;..\..\Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Winmm.lib;d3dx9.lib;MyGUIEngine.lib;dxguid.lib;dinput8.lib;MyGUI.DirectXPlatform.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>Src/Directx/proxydll.def</ModuleDefinitionFile>
       <ImportLibrary>..\..\Bin\$(TargetName).lib</ImportLibrary>
