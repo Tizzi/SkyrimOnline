@@ -14,7 +14,7 @@
     <ProjectGuid>{D8B2564C-4766-4DDF-B7E0-43DB3971B3A3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SkyrimOnline</RootNamespace>
-    <ProjectName>OnlineClientProxy</ProjectName>
+    <ProjectName>SkyrimOnlineProxy</ProjectName>
     <SccProjectName>Svn</SccProjectName>
     <SccAuxPath>Svn</SccAuxPath>
     <SccLocalPath>Svn</SccLocalPath>

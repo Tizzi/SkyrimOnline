@@ -14,7 +14,7 @@
     <ProjectGuid>{5BD3DA32-06CE-4029-BF72-2E00B3DF7F4E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SkyrimOnline</RootNamespace>
-    <ProjectName>OnlineClient</ProjectName>
+    <ProjectName>SkyrimOnline</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -80,7 +80,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>..\..\Bin\$(TargetName).asi</OutputFile>
       <AdditionalLibraryDirectories>$(DXSDK_DIR)\Lib\x86;..\..\..\Dependencies\Boost\Lib\x86;..\..\..\Dependencies\MyGUI\Lib;..\..\Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OnlineClientProxy.lib;Winmm.lib;d3dx9.lib;MyGUIEngine.lib;dxguid.lib;dinput8.lib;MyGUI.DirectXPlatform.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SkyrimOnlineProxy.lib;Winmm.lib;d3dx9.lib;MyGUIEngine.lib;dxguid.lib;dinput8.lib;MyGUI.DirectXPlatform.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
