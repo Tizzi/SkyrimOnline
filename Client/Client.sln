@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OnlineClient", "Src\OnlineClient\OnlineClient.vcxproj", "{5BD3DA32-06CE-4029-BF72-2E00B3DF7F4E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkyrimOnline", "Src\OnlineClient\OnlineClient.vcxproj", "{5BD3DA32-06CE-4029-BF72-2E00B3DF7F4E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OnlineClientProxy", "Src\OnlineClientProxy\OnlineClientProxy.vcxproj", "{D8B2564C-4766-4DDF-B7E0-43DB3971B3A3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkyrimOnlineProxy", "Src\SkyrimOnlineProxy\SkyrimOnlineProxy.vcxproj", "{D8B2564C-4766-4DDF-B7E0-43DB3971B3A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
