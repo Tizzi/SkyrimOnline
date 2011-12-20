@@ -57,7 +57,7 @@ namespace SkyrimOnline
 		{
 			try{
 				tcp::resolver::query query("skyrim-online.com", "8558");
-
+//tcp::resolver::query query("127.0.0.1", "8558");
 				handle_resolve(resolver_->resolve(query));
 			}
 			catch(std::exception& e)

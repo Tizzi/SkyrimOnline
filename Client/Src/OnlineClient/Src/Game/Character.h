@@ -22,6 +22,7 @@ namespace SkyrimOnline
 			void SetRot(float x, float y, float z);
 
 			bool IsRidding();
+			unsigned int GetMountID();
 
 			unsigned int GetSex();
 			unsigned int GetRace();

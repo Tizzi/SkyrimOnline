@@ -86,7 +86,7 @@ namespace Skyrim
 		//---------------------------------------------------------------------
 		void Session::HandleMount(Packet& pData)
 		{
-			if(pData.Int(0) == 0x0010982B)
+			if(pData.Int(0) != 0)
 			{
 				GetPlayer().SetMount(pData.Int(0));
 				Packet packet;

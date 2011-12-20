@@ -86,5 +86,16 @@ namespace SkyrimOnline
 			return Obscript::IsRidingHorse((TESObjectREFR*)mActor) == 1.f;
 		}
 		//--------------------------------------------------------------------------------
+		unsigned int Character::GetMountID()
+		{
+			if (IsRidding())
+			{
+				CActor * lMount = ::Game::GetPlayersLastRiddenHorse();
+				return ID_Character::SolitudePlayersHorseRef;	/// Fake
+			}
+
+			return 0;
+		}
+		//--------------------------------------------------------------------------------
 	}
 }

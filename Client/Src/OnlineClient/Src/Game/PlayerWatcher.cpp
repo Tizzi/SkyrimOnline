@@ -58,7 +58,7 @@ namespace SkyrimOnline
 							// Associate mount to player
 							Packet mount;
 							mount.Opcode = CMSG_MOUNT_SPAWN;
-							mount.Push((unsigned int)0x0010982B);
+							mount.Push((unsigned int)mPlayer.GetMountID());
 							mSession->Write(mount);
 						}
 						else

@@ -110,6 +110,8 @@ namespace SkyrimOnline
 				if(mMount)
 					ObjectReference::TranslateTo((TESObjectREFR*)mMount->actor(),mNext.posX, mNext.posY, mNext.posZ, mNext.rotX, mNext.rotY, mNext.rotZ,speed, 200);
 			}
+
+			ObjectReference::PlayAnimation((TESObjectREFR*)mMe->actor(), "Walk");
 		}
 		//--------------------------------------------------------------------------------
 		void RemotePlayer::Update(float elapsed)
@@ -127,8 +129,14 @@ namespace SkyrimOnline
 			}
 			if(pMount != 0)
 			{
-				mMount = new Character((CActor*)ObjectReference::PlaceAtMe((TESObjectREFR*)mMe, ::Game::GetFormById(pMount), 1, true, false));
+				mMount = new Character((CActor*)ObjectReference::PlaceAtMe((TESObjectREFR*)::Game::GetPlayer(), ::Game::GetFormById(pMount), 1, true, false));
+				mMount->SetPos(mMe->GetPosX(), mMe->GetPosY(), mMe->GetPosZ());
+				mMount->SetRot(mMe->GetRotX(), mMe->GetRotY(), mMe->GetRotZ());
+
 				Actor::EnableAI(mMount->actor(), false);
+				
+				ObjectReference::TetherToHorse((TESObjectREFR*)mMe->actor(), (TESObjectREFR*)mMount->actor());
+				
 				Mod::GetInstance().GetAssetManager().Add((TESObjectREFR*)mMount->actor());
 			}
 		}
