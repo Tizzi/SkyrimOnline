@@ -59,7 +59,7 @@ namespace SkyrimOnline
 							Packet mount;
 							mount.Opcode = CMSG_MOUNT_SPAWN;
 							mount.Int(0x0010982B);
-							mSession->Write(data);
+							mSession->Write(mount);
 						}
 						else
 						{
@@ -67,7 +67,7 @@ namespace SkyrimOnline
 							Packet mount;
 							mount.Opcode = CMSG_MOUNT_REMOVE;
 							mount.Int(0);
-							mSession->Write(data);
+							mSession->Write(mount);
 						}
 					}
 
