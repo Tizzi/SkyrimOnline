@@ -10,31 +10,30 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class StateManager
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			enum Enum
+			{
+				LOGIN,
+				SHARD_LIST,
+				IN_GAME,
+				LOADING
+			};
 
-	void SetLevel(Level pLevel);
+			StateManager();
+			Enum GetState();
+			void SetState(Enum pState);
+			bool IsState(Enum pState);
 
-private:
+		private:
 
-	void PrintTime();
-
-	Log();
-
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			Enum mState;
+		};
+	}
+}

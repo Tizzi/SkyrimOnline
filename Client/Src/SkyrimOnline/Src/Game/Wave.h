@@ -10,31 +10,39 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class Wave
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			class Tier
+			{
+			public:
+				Tier(unsigned int id, unsigned int count)
+					:mId(id),mCount(count)
+				{
+				}
+				unsigned int mId, mCount;
+			};
 
-	void SetLevel(Level pLevel);
+			Wave();
+			~Wave();
 
-private:
+			void Add(const Tier&);
+			void Instanciate();
+			bool Complete();
+			void Update();
+			void Kill();
 
-	void PrintTime();
+		private:
 
-	Log();
-
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			std::list<Tier> mTiers;
+			std::list<CActor*> mRefs;
+			bool mInstanciated;
+			unsigned int mTotal;
+		};
+	}
+}

@@ -10,31 +10,26 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class AssetManager
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			AssetManager();
+			~AssetManager();
+			void Add(TESObjectREFR* pAsset);
+			void Remove(TESObjectREFR* pAsset);
 
-	void SetLevel(Level pLevel);
+		protected:
 
-private:
+			void Write();
 
-	void PrintTime();
+		private:
 
-	Log();
-
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			std::list<uint32_t> mAssets;
+		};
+	}
+}

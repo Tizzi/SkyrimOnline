@@ -19,6 +19,9 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 #include <boost/signal.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/tuple/tuple.hpp>
+#include <boost/timer.hpp>
+
+#include <Game/data.h>
 
 #include <list>
 #include <vector>
@@ -29,7 +32,13 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 #include <unordered_map>
 
 #include <Winuser.h>
-#include <d3d9.h>
+
+#include <dinput.h>
+
+//#include <ois/OIS.h>
+
+#include <MyGUI.h>
+#include <MyGUI_DirectXPlatform.h>
 
 #include <common/skyscript.h>
 #include <common/obscript.h>

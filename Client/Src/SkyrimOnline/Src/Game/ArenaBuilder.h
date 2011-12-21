@@ -10,31 +10,29 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class ArenaBuilder
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			static const unsigned int Wall;
+			static const unsigned int Pillar;
+			static const unsigned int Bench;
+			static const unsigned int Statue;
+			static const unsigned int Fence;
+			static const unsigned int Tower;
+			static const unsigned int Arch;
 
-	void SetLevel(Level pLevel);
+			ArenaBuilder();
+			~ArenaBuilder();
 
-private:
+		private:
 
-	void PrintTime();
-
-	Log();
-
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			float mX,mY,mZ;
+			std::list<TESObjectREFR*> mObjects;
+		};
+	}
+}

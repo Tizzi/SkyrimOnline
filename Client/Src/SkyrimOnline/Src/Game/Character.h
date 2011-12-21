@@ -10,31 +10,42 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class Character
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			Character(CActor* pActor);
 
-	void SetLevel(Level pLevel);
+			float GetPosX();
+			float GetPosY();
+			float GetPosZ();
 
-private:
+			float GetRotX();
+			float GetRotY();
+			float GetRotZ();
 
-	void PrintTime();
+			void SetPos(float x, float y, float z);
+			void SetRot(float x, float y, float z);
 
-	Log();
+			bool IsRidding();
+			unsigned int GetMountID();
 
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			unsigned int GetSex();
+			unsigned int GetRace();
+			unsigned int GetLevel();
+
+			bool IsDead();
+
+			CActor* actor();
+			void SetActor(CActor* pActor);
+
+		private:
+
+			CActor* mActor;
+		};
+	}
+}

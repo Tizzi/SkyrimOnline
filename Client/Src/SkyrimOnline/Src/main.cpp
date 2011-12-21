@@ -8,33 +8,30 @@ TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT,
 THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
 */
 
-#pragma once
+#include "stdafx.h"
+#include <Mod.h>
 
-class Log
+__declspec(dllexport) void main()
 {
-public:
+	//std::ostringstream os;
+	//for(int i = 0; i < 6; ++i)
+	//	os << Actor::Item
+	//Log::GetInstance()->Debug(os.str());
 
-	enum Level
+	srand((unsigned int)time(NULL));
+	PrintNote("To play Skyrim Online, press F3");
+
+	bool onlineMod = false;
+	while(!SkyrimOnline::Mod::Exists())
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		if(GetKeyPressed(VK_F3))
+		{
+			onlineMod = true;
+			break;
+		}
+		Wait(0);
+	}
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
-
-	void SetLevel(Level pLevel);
-
-private:
-
-	void PrintTime();
-
-	Log();
-
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+	if(onlineMod || SkyrimOnline::Mod::Exists())
+		SkyrimOnline::Mod::GetInstance().Run();
+}

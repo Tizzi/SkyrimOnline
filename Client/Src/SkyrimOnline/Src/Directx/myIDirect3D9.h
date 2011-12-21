@@ -10,7 +10,7 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class __declspec(dllexport) myIDirect3D9 : public IDirect3D9
+class myIDirect3D9 : public IDirect3D9
 {
 public:
     myIDirect3D9(IDirect3D9 *pOriginal);

@@ -10,31 +10,30 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class TimeManager
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			TimeManager();
 
-	void SetLevel(Level pLevel);
+			void SetHour(float pHour);
+			void SetDay(float pDay);
+			void SetMonth(float pMonth);
 
-private:
+			void Update(float pElapsed);
 
-	void PrintTime();
+		private:
 
-	Log();
+			static int DayPerMonth[12];
 
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			float mHour;
+			float mDay;
+			float mMonth;
+			float mTimeScale;
+		};
+	}
+}

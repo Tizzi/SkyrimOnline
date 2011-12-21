@@ -10,31 +10,26 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+#include "RemotePlayer.h"
+
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class __declspec(dllexport) CharacterManager
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			CharacterManager();
+			~CharacterManager();
+			void Add(RemotePlayer* pPlayer);
+			RemotePlayer* Remove(RemotePlayer* pPlayer);
+			RemotePlayer* Get(unsigned int);
+			void Update(float);
 
-	void SetLevel(Level pLevel);
+		private:
 
-private:
-
-	void PrintTime();
-
-	Log();
-
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			std::map<unsigned int, RemotePlayer*> mCharacters;
+		};
+	}
+}

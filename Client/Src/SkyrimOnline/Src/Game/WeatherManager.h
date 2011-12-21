@@ -10,31 +10,23 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class WeatherManager
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			WeatherManager();
 
-	void SetLevel(Level pLevel);
+			void SetWeather(unsigned int pWeather);
 
-private:
+			void Update(float pElapsed);
 
-	void PrintTime();
+		private:
 
-	Log();
-
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			unsigned int mWeather;
+		};
+	}
+}

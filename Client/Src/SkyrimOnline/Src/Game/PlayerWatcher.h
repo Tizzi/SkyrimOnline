@@ -10,31 +10,32 @@ THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEP
 
 #pragma once
 
-class Log
+#include <Network/Session.h>
+#include <Game/Character.h>
+
+namespace SkyrimOnline
 {
-public:
-
-	enum Level
+	namespace Game
 	{
-		NONE,
-		LOW,
-		VERBOSE
-	};
+		class PlayerWatcher
+		{
+		public:
 
-	static Log* GetInstance();
-	void Print(const std::string&);
-	void Debug(const std::string&);
-	void Error(const std::string&);
+			PlayerWatcher();
 
-	void SetLevel(Level pLevel);
+			void Update(float);
 
-private:
+			void SetSession(Network::Session* pSession);
 
-	void PrintTime();
+			bool IsDead();
 
-	Log();
+		private:
 
-	std::ofstream mLog;
-	static Log* mInstance;
-	Level mLevel;
-};
+			Network::Session* mSession;
+			Character mPlayer;
+			bool mSentInfos;
+			float mTimer;
+			bool mMount;
+		};
+	}
+}
